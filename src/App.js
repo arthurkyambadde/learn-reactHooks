@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./App.css";
+import Counter from "./Functional/Counter";
 
 class App extends React.Component {
   constructor(props) {
@@ -26,6 +27,8 @@ class App extends React.Component {
         >
           Decrease count
         </button>
+
+        <Counter />
       </div>
     );
   }
