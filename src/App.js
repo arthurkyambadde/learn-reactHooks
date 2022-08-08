@@ -14,19 +14,19 @@ class App extends React.Component {
   render() {
     return (
       <div data-testid="application_container">
-        <h1 data-testid="counter_display">{`The counter is ${this.state.count}`}</h1>
+        {/* <h1 data-testid="counter_display">{`The counter is ${this.state.count}`}</h1>
         <button
           data-testid="increment_button"
           onMouseEnter={() => this.setState({ count: this.state.count + 1 })}
         >
           Increase count
-        </button>
-        <button
+        </button> */}
+        {/* <button
           data-testid="decrement_button"
           onMouseEnter={() => this.setState({ count: this.state.count - 1 })}
         >
           Decrease count
-        </button>
+        </button> */}
 
         <Counter />
       </div>

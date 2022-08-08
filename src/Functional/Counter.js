@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import styled from "styled-components";
 
 const CounterContainer = styled.div`
@@ -36,15 +36,37 @@ const CounterDisplay = styled.div`
 
 function Counter() {
   const [count, setCount] = useState(0);
+  //   const [quantity, setQuantity] = useState(50);
 
-  const increaseCount = () => setCount(count - 1);
-  const decreaseCount = () => setCount(count + 1);
+  const increaseCount = () => setCount(count + 1);
+  const decreaseCount = () => {
+    setCount(count - 1);
+    // setQua(count - 1);
+  };
+
+  //   useEffect(() => {
+  //     console.log(
+  //       "this will run when the component first renders and every time the component updates~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  //     );
+  //   });
+
+  //   useEffect(() => {
+  //     console.log(
+  //       "this will run when the component first renders and every tiime############################################"
+  //     );
+  //   }, []);
+
+  //   useEffect(() => {
+  //     console.log(
+  //       "this will run when the component first renders and every time the component count updates*************************************"
+  //     );
+  //   }, [count]);
 
   return (
     <CounterContainer>
-      <Button onClick={increaseCount}>-</Button>
+      <Button onClick={decreaseCount}>-</Button>
       <CounterDisplay>Counter: {count}</CounterDisplay>
-      <Button onClick={decreaseCount}>+</Button>
+      <Button onClick={increaseCount}>+</Button>
     </CounterContainer>
   );
 }
